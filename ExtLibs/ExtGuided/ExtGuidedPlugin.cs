@@ -24,7 +24,7 @@ using MissionPlanner.Utilities;
 
         public override bool Loaded() 
         {
-            ToolStripLabel item = new ToolStripLabel("External Guided");
+            ToolStripMenuItem item = new ToolStripMenuItem("External Guided");
             item.Click += item_Click;
 
             Host.FDMenuMap.Items.Add(item);

@@ -19,7 +19,7 @@ namespace MissionPlanner.Plugin
         {
             if (!File.Exists(file) || !file.EndsWith(".dll", true, null))
                 return;
-
+            log.InfoFormat("Try loading " + file + " as plugin.");
             Assembly asm = null;
 
             try
@@ -65,8 +65,9 @@ namespace MissionPlanner.Plugin
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Console.WriteLine(e.InnerException);
             }
         }
 
